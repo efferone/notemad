@@ -1,0 +1,19 @@
+/* The dark palette inverted: cool paper, one periwinkle accent. */
+
+@define-color theme_bg          #FAFBFD;
+@define-color theme_fg          #1F2229;
+@define-color theme_chrome      #EEF0F4;
+@define-color theme_raised      #FFFFFF;
+@define-color theme_hover       #E2E6EE;
+@define-color theme_border      #D2D7E0;
+@define-color theme_entry_bg    #FFFFFF;
+
+/* Darker than the dark theme's #8AA9F0, which is a pale blue on a pale ground
+   and reads as nothing. */
+@define-color theme_accent      #4C63B6;
+@define-color theme_accent_text #3E539C;
+@define-color theme_accent_fg   #FFFFFF;
+@define-color theme_glow        #4C63B6;
+
+/* White would disappear into a pale header, so this goes the other way. */
+@define-color theme_warning     #A85A00;

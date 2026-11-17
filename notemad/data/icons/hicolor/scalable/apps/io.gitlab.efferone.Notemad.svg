@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#282C34"/>
+      <stop offset="1" stop-color="#171A20"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#ground)"/>
+  <!-- Inset by half the stroke width so the border sits inside the ground edge
+       rather than straddling it. -->
+  <rect x="5.25" y="5.25" width="117.5" height="117.5" rx="26.75" fill="none"
+        stroke="#8AA9F0" stroke-width="2.5"/>
+
+  <path d="M34 96 V32 H49 L79 73 V32 H94 V96 H79 L49 55 V96 Z" fill="#E8EBF0"/>
+  <!-- The border thins to a hairline at 24px, so the diagonal is what keeps the
+       icon reading as accented at menu and taskbar size. -->
+  <path d="M49 32 L79 73 V96 L49 55 Z" fill="#8AA9F0"/>
+</svg>

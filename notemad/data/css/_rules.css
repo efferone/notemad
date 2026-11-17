@@ -1,0 +1,129 @@
+/* Every rule in Notemad's interface, in terms of the palette rather than of
+   particular colours. A palette file is loaded in front of this one, so adding
+   a theme means writing a dozen colours rather than copying all of this. */
+
+/* libadwaita paints most of the window itself and takes its lead from these. */
+@define-color accent_color @theme_accent_text;
+@define-color accent_bg_color @theme_accent;
+@define-color accent_fg_color @theme_accent_fg;
+
+@define-color window_bg_color @theme_bg;
+@define-color window_fg_color @theme_fg;
+@define-color headerbar_bg_color @theme_chrome;
+@define-color headerbar_fg_color @theme_fg;
+@define-color view_bg_color @theme_bg;
+@define-color view_fg_color @theme_fg;
+@define-color popover_bg_color @theme_raised;
+@define-color popover_fg_color @theme_fg;
+@define-color card_bg_color @theme_raised;
+
+window {
+  background-color: @theme_bg;
+  color: @theme_fg;
+}
+
+headerbar {
+  background-color: @theme_chrome;
+  box-shadow: inset 0 -2px alpha(@theme_fg, 0.22);
+}
+
+/* Monospaced on purpose: the spacing and the tildes are doing terminal, and a
+   proportional face fights them. Adwaita Mono arrives with libadwaita, DejaVu
+   is on more or less every Linux box, and the generic keeps the rest honest. */
+.app-title {
+  color: @theme_fg;
+  font-family: "Adwaita Mono", "DejaVu Sans Mono", monospace;
+  font-weight: 500;
+}
+
+.app-title .tilde {
+  color: @theme_accent;
+}
+
+tabbar {
+  background-color: @theme_chrome;
+  box-shadow: inset 0 -1px alpha(@theme_glow, 0.18);
+}
+
+tabbar tab:selected {
+  background-color: @theme_bg;
+  box-shadow: inset 0 -2px @theme_accent;
+}
+
+tabbar tab:hover {
+  background-color: @theme_hover;
+}
+
+button.flat:hover {
+  background-color: alpha(@theme_glow, 0.14);
+}
+
+entry {
+  background-color: @theme_entry_bg;
+  color: @theme_fg;
+  border: 1px solid @theme_border;
+}
+
+entry:focus-within {
+  border-color: @theme_accent;
+  box-shadow: 0 0 0 1px alpha(@theme_glow, 0.4);
+}
+
+toast {
+  background-color: @theme_raised;
+  color: @theme_fg;
+  box-shadow: inset 0 0 0 1px alpha(@theme_glow, 0.4);
+}
+
+.findbar {
+  background-color: @theme_chrome;
+  box-shadow: inset 0 -1px alpha(@theme_glow, 0.25);
+}
+
+.statusbar {
+  background-color: @theme_chrome;
+  box-shadow: inset 0 2px alpha(@theme_fg, 0.26);
+  padding: 2px 12px;
+  font-size: 0.85em;
+}
+
+.statusbar button {
+  padding: 1px 8px;
+  min-height: 0;
+  color: @theme_accent_text;
+}
+
+/* What the archive is taking up. Quiet while it is a normal size, since it is
+   only there to be glanced at. */
+.statusbar button.archive-usage {
+  color: alpha(@theme_fg, 0.55);
+}
+
+/* Past the size the user asked to be warned at, where it has something to say
+   rather than only something to report. */
+.statusbar button.archive-usage.archive-over {
+  color: @theme_warning;
+  font-weight: bold;
+}
+
+headerbar separator.header-separator {
+  min-width: 2px;
+  margin: 10px 6px;
+  background-color: alpha(@theme_accent, 0.6);
+}
+
+/* The same weight as the line under the header, so the two read as one frame. */
+paned.split > separator {
+  min-width: 2px;
+  background-color: alpha(@theme_fg, 0.22);
+}
+
+headerbar button.theme-switch {
+  color: @theme_accent;
+  background-color: alpha(@theme_accent, 0.15);
+  border-radius: 999px;
+}
+
+headerbar button.theme-switch:hover {
+  background-color: alpha(@theme_accent, 0.26);
+}

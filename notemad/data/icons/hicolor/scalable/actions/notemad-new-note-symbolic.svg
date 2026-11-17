@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A page with a plus beside it. Deliberately not taken from the icon theme,
+     since not every theme ships a tab-new icon. Drawn in fills rather than
+     strokes: GTK recolours a symbolic icon by overriding fill, and a stroked
+     one comes out blank. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <path fill-rule="evenodd"
+        d="M1.6 1.4 H6.6 L8.6 3.4 V10.4 H1.6 Z
+           M2.8 2.6 H6.0 L7.4 4.0 V9.2 H2.8 Z"/>
+  <rect x="8.4" y="10.6" width="6" height="1.8" rx="0.9"/>
+  <rect x="10.5" y="8.5" width="1.8" height="6" rx="0.9"/>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="notemad-light" name="Notemad Light" version="1.0">
+  <author>efferone</author>
+  <description>Cool paper with a periwinkle accent.</description>
+
+  <color name="ground"      value="#FAFBFD"/>
+  <color name="gutter"      value="#EEF0F4"/>
+  <color name="line"        value="#F0F2F7"/>
+  <color name="text"        value="#1F2229"/>
+  <color name="muted"       value="#6E7683"/>
+  <color name="selection"   value="#D5DCF2"/>
+  <color name="accent"      value="#4C63B6"/>
+
+  <style name="text"                foreground="text" background="ground"/>
+  <style name="selection"           foreground="text" background="selection"/>
+  <style name="selection-unfocused" foreground="text" background="line"/>
+  <style name="cursor"              foreground="accent"/>
+  <style name="current-line"        background="line"/>
+  <style name="current-line-number" foreground="accent" background="line" bold="true"/>
+  <style name="line-numbers"        foreground="muted" background="gutter"/>
+  <style name="right-margin"        foreground="muted" background="muted"/>
+  <style name="draw-spaces"         foreground="muted"/>
+
+  <style name="bracket-match"       foreground="accent" background="selection" bold="true"/>
+  <style name="bracket-mismatch"    foreground="ground" background="#A85A00" bold="true"/>
+  <style name="search-match"        foreground="ground" background="accent"/>
+</style-scheme>

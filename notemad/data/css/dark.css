@@ -1,0 +1,16 @@
+/* Cool greys, one periwinkle accent, everything else greyscale. */
+
+@define-color theme_bg          #1F2229;
+@define-color theme_fg          #E8EBF0;
+@define-color theme_chrome      #171A20;
+@define-color theme_raised      #282C34;
+@define-color theme_hover       #30353F;
+@define-color theme_border      #363B45;
+@define-color theme_entry_bg    #171A20;
+
+@define-color theme_accent      #8AA9F0;
+@define-color theme_accent_text #A6BFF6;
+@define-color theme_accent_fg   #171A20;
+@define-color theme_glow        #8AA9F0;
+
+@define-color theme_warning     #DDA95F;
