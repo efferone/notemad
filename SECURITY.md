@@ -1,5 +1,23 @@
 # Security review
 
+## Reporting a vulnerability
+
+Please do not report security problems in a public issue.
+
+Open a [confidential issue](https://gitlab.com/efferone/notemad/-/issues/new)
+and tick the confidentiality checkbox at the bottom of the form before
+submitting. Confidential issues are visible only to you and the project
+maintainer.
+
+If you would rather not use GitLab, email efferone@proton.me.
+
+I will ack a report within a week. Notemad is maintained by one person
+in their spare time, so please allow a reasonable period for a fix before
+disclosing publicly.
+
+----
+
+
 This is a record of a security and correctness review of Notemad carried out in
 August 2026, covering the whole codebase, and of everything that was changed as
 a result. It is written to be read by anyone, not just by someone who already
