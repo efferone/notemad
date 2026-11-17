@@ -69,7 +69,23 @@ session.
 
 ## Installing
 
-On Arch systems, `uv tool install .` is enough to get the command.
+On Arch and derivatives the tidiest way is to build a package, since there is a
+`PKGBUILD` in the repository:
+
+```
+git clone https://gitlab.com/efferone/notemad.git
+cd notemad
+makepkg -si
+```
+
+That puts the command, the desktop entry and the icon all where they belong,
+and `sudo pacman -R notemad` takes the lot back out again. It builds from the
+0.1.0 release tarball rather than from your clone, so local edits are not what
+gets installed. It will go on the AUR once registration reopens, which is shut
+at the moment while Arch deal with a wave of malicious packages.
+
+If you would rather not build a package, `uv tool install .` is enough on Arch
+to get the command.
 
 It is not enough on Debian or Fedora. `uv` builds an isolated environment that
 cannot see the system Python packages, so it goes to PyPI for PyGObject, which
@@ -108,6 +124,16 @@ sed -i "s|^Exec=notemad|Exec=${HOME}/.local/bin/notemad|" \
 ```
 
 It's not perfect, but it is a work-around for now until I get a better solution..
+
+One last thing if you installed by hand first and later switch to the package.
+Delete the two copies under `~/.local/share/` and then rebuild the icon cache:
+
+```
+gtk4-update-icon-cache -f -t ~/.local/share/icons/hicolor
+```
+
+That cache still lists the icon after you delete the file, and GTK trusts it
+ahead of `/usr/share/icons`, so you get the fallback icon until it is rebuilt.
 
 
 ## What it does
