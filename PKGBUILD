@@ -13,7 +13,7 @@ makedepends=('python-build' 'python-installer' 'python-hatchling' 'python-wheel'
 checkdepends=('python-pytest' 'python-hypothesis' 'xorg-server-xvfb')
 # The release asset, not the forge-generated archive: those are rebuilt on
 # demand, are not byte-stable, and use a notemad-v0.1.0/ prefix.
-source=("$pkgname-$pkgver.tar.gz::https://gitlab.com/-/project/89045398/uploads/359cf36494af79bd6d211b411789b448/notemad-0.1.0.tar.gz")
+source=("$url/-/releases/v$pkgver/downloads/$pkgname-$pkgver.tar.gz")
 sha256sums=('93a96cc292c8e79d5920bb654d3b4cf1ad38822f53c4254e018e8cb7b7d94cd0')
 
 build() {
