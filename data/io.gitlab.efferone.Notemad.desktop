@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Notemad
+GenericName=Text Editor
+Comment=A tabbed note editor that never asks you to save
+Exec=notemad %U
+Icon=io.gitlab.efferone.Notemad
+Terminal=false
+Categories=Utility;TextEditor;
+MimeType=text/plain;
+Keywords=notes;note;text;editor;scratch;
+StartupNotify=true
+StartupWMClass=io.gitlab.efferone.Notemad

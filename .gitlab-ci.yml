@@ -1,0 +1,16 @@
+# Arch, because notemad is developed against current GTK and the distro packages
+# PyGObject rather than making it a build-from-source problem.
+image: archlinux:base-devel
+
+stages: [check]
+
+check:
+  stage: check
+  before_script:
+    - pacman -Syu --noconfirm python uv gtk4 libadwaita gtksourceview5
+      gobject-introspection cairo pkgconf xorg-server-xvfb
+  script:
+    - uv run ruff check .
+    - uv run ruff format --check .
+    # Several tests build real widgets, which needs a display even headless.
+    - xvfb-run -a uv run pytest -q
